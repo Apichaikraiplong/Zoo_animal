@@ -27,9 +27,11 @@ public class Zoo {
         System.out.println("-----Ability animal-----");
          for (Animal a : zoo_animal) {
            if (a instanceof Flyable) {
-                System.out.println(a.getName() + " : " + ((Flyable)a).fly());
+                Flyable f = (Flyable) a;
+                System.out.println(a.getName() + " : " + f.fly());
            }else if (a instanceof Swimable) {
-                System.out.println(a.getName() + " : " + ((Swimable)a).swim());
+                Swimable f = (Swimable) a;
+                System.out.println(a.getName() + " : " + f.swim());
            }else
                 System.out.println(a.getName() +" : Walking in Zoo");
         }
